@@ -3,3 +3,32 @@
 .chatbox{
     height: 450px;
 }
+
+#messages {
+    height: 15em;
+    overflow: auto;
+}
+
+// .input {
+//     button{
+//         display: none;
+//     }
+// }
+#page{
+	background-image: asset-url('photo.jfif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1000px;
+    flex: 1 0 auto;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#orange{
+    color: black;
+}

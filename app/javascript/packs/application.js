@@ -20,10 +20,33 @@ ActiveStorage.start()
 // $('.message .close').on('click', function() {
 //     $(this).closest('.message').transition('fade');
 // });
+export const scroll_bottom = function() {
+        if ($('#messages').length > 0) {
+            $('#messages').scrollTop($('#messages')[0].scrollHeight);
+        }
+};
+
+const submit_message = function(){
+        $('#message_body').on('keydown', function(e){
+                if(e.keycode == 13){
+                        $('button').click();
+                        // e.target.valure = "";
+                };
+        });  
+};
+
+$(document).bind("ajax:beforeSend", function(){
+        $('#message_body').val('');
+    });
+
 $(document).on('turbolinks:load', function(){     
         $(".ui.dropdown").dropdown();    
         $('.message .close').on('click', function(){ $(this).closest('.message').transition('fade')     
         });
+        scroll_bottom();
+        submit_message();
+        
 });
+
 
 
