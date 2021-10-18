@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   root 'chatroom#index'
   post 'message', to: 'messages#create'
-  
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
+  resource :users, except: [:new]
   mount ActionCable.server, at: '/cable'
 end
