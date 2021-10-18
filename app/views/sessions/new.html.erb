@@ -6,7 +6,7 @@
 </h4>
 
 <div class="ui raised placeholder segment" id="first-box">
-    <div class="ui two column very relaxed stackable grid ">
+    <div class="ui one column very relaxed stackable grid ">
     <div class="column">
         <%= form_for(:session, html: {class: "ui form", role: "form"}, url: login_path) do |form| %>
         <div class="field">
@@ -25,14 +25,6 @@
         </div>
         <%= form.button "Login", class:"ui orange submit button" %>
         <% end %>
-        
     </div>
-    <div class="middle aligned column">
-        <%= link_to "Sign Up", signup_path, class: "ui orange disabled big button" %>
-    </div>
-    </div>
-        <div class="ui vertical divider">
-        Or
-        </div>
 </div>
 </div>
